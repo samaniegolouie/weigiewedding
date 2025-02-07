@@ -14757,7 +14757,9 @@ a.ui-button:active, .ui-button:active,
     font-size: 27px;
   }
 }
-
+.text-black{
+  color: #101010 !important;
+}
 .wpo-portfolio-section-s3 .portfolio-grids .grid .portfolio-content h4 a {
   color: #101010;
 }
