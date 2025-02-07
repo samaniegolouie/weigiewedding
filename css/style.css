@@ -14759,6 +14759,7 @@ a.ui-button:active, .ui-button:active,
 }
 .text-black{
   color: #101010 !important;
+  font-size: 18px !important;
 }
 .wpo-portfolio-section-s3 .portfolio-grids .grid .portfolio-content h4 a {
   color: #101010;
