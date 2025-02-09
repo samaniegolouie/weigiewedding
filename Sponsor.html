@@ -87,7 +87,7 @@
                             <div class="col-lg-2 col-md-6 col-6 my-3">
                                 <div class="navbar-header text-center">
                                     <a class="navbar-brand"
-                                        href="#"><img src="./images/1.png" alt="" style="width: 107px" >
+                                        href="#"><img src="./images/logo3.png" alt="" style="width: 107px" >
                                         </a>
                                 </div>
                             </div>
@@ -95,11 +95,11 @@
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li class="menu-item-has-children">
+                                        <li class="">
                                             <a 
                                                 href="index.html">Home</a>                                            
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <li class="">
                                             <a class="active" href="Sponsor.html">Sponsors</a>                                            
                                         </li>
                                         <!-- <li class="menu-item-has-children">
@@ -186,53 +186,8 @@
 
 
                 <div class="wpo-team-wrap">
-                    <div class="row justify-content-center">
-                        <div class="col col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="wpo-team-item wow fadeInUp" data-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: fadeInUp;">
-                                <div class="wpo-team-img-wrap">
-                                    <div class="wpo-team-img">
-                                        <div class="wpo-team-img-inner">
-                                            <img src="./images/img-sponsor/Sponsor-img-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpo-team-text">
-                                    <h4>Jenny Wilson</h4>
-                                    <span class="text-black">Candle</span>
-                                </div>
-                            </div>
-                        </div>                      
-                        <div class="col col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="wpo-team-item wow fadeInUp" data-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: fadeInUp;">
-                                <div class="wpo-team-img-wrap">
-                                    <div class="wpo-team-img">
-                                        <div class="wpo-team-img-inner">
-                                            <img src="./images/img-sponsor/Sponsor-img-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpo-team-text">
-                                    <h4>Jenny Wilson</h4>
-                                    <span class="text-black">Cord</span>
-                                </div>
-                            </div>
-                        </div>                      
-                        <div class="col col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="wpo-team-item wow fadeInUp" data-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: fadeInUp;">
-                                <div class="wpo-team-img-wrap">
-                                    <div class="wpo-team-img">
-                                        <div class="wpo-team-img-inner">
-                                            <img src="./images/img-sponsor/Sponsor-img-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpo-team-text">
-                                    <h4>Jenny Wilson</h4>
-                                    <span class="text-black">Veil</span>
-                                </div>
-                            </div>
-                        </div>                      
-                    </div>
+                    <div class="row justify-content-center" id="CandelCordVeilContainersecondary">                        
+                    </div>                   
                 </div>
 
                 
@@ -498,6 +453,48 @@
                 </div>
             `;
             GroomsBridesContainersecondary.appendChild(sponsorElement);
+        });
+
+
+
+
+          // JSON Data (normally from a separate file) CANDLE CORD VEIL
+          const CandelCordVeil = [
+            { "name": "Jenny Wilson", "role": "Candle", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Robert Fox", "role": "Candle", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Annette Black", "role": "Cord", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Jenefer Abram", "role": "Cord", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },   
+            { "name": "Jenny Wilson", "role": "Veil", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Robert Fox", "role": "Veil", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Robert Fox", "role": "Bible", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Robert Fox", "role": "Bible", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Robert Fox", "role": "Coin", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Robert Fox", "role": "Coin", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Robert Fox", "role": "Ring", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Robert Fox", "role": "Ring", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+              
+        ];
+
+        // Inject sponsors into HTML
+        const CandelCordVeilContainersecondary = document.getElementById("CandelCordVeilContainersecondary");
+
+        CandelCordVeil.forEach((sponsor, index) => {
+            const sponsorElement = document.createElement("div");
+            sponsorElement.classList.add("col","col-lg-2", "col-md-6", "col-sm-6", "col-12");
+            sponsorElement.innerHTML = `
+                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
+                    <div class="wpo-team-img">
+                        <div class="wpo-team-img-inner">
+                            <img src="${sponsor.img}" alt="${sponsor.name}">
+                        </div>
+                    </div>
+                    <div class="wpo-team-text">
+                    <h4>${sponsor.name}</h4>
+                    <span class="text-black">${sponsor.role}</span>
+                    </div>
+                </div>
+            `;
+            CandelCordVeilContainersecondary.appendChild(sponsorElement);
         });
 
 
