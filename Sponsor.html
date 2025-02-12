@@ -163,7 +163,7 @@
                     <div class="row justify-content-center">
                         <div class="col col-lg-2 col-md-3 col-sm-6 col-12">
                             <div class="wpo-team-item wow fadeInUp" data-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: fadeInUp;">
-                                <div class="wpo-team-img-wrap">
+                                <div class="wpo-team-img hideable">
                                     <div class="wpo-team-img">
                                         <div class="wpo-team-img-inner">
                                             <img src="./images/img-sponsor/Sponsor-img-2.jpg" alt="">
@@ -283,10 +283,10 @@
                     </div>
                 </div>
             </div>
-            <div class="ft-shape-1">
+            <div class="ft-shape-1 col-lg-1">
                 <img src="./images/footer-shape-1.svg" alt="">
             </div>
-            <div class="ft-shape-2">
+            <div class="ft-shape-2 col-lg-1">
                 <img src="./images/footer-shape-2.svg" alt="">
             </div>
         </footer>
@@ -361,6 +361,9 @@
     </script> -->
 
     <script>
+
+        let isHidden = false; // Global variable to track visibility  
+  
         // JSON Data (normally from a separate file)  PRICIPAL
         const sponsors = [
             { "name": "Jenny Wilson", "role": "", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },
@@ -383,7 +386,7 @@
             sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
             sponsorElement.innerHTML = `
                 <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                    <div class="wpo-team-img ">
+                    <div class="wpo-team-img hideable">
                         <div class="wpo-team-img-inner ">
                             <img src="${sponsor.img}" alt="${sponsor.name}">
                         </div>
@@ -413,7 +416,7 @@
             sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
             sponsorElement.innerHTML = `
                 <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                    <div class="wpo-team-img">
+                     <div class="wpo-team-img hideable">
                         <div class="wpo-team-img-inner">
                             <img src="${sponsor.img}" alt="${sponsor.name}">
                         </div>
@@ -458,7 +461,7 @@
             sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
             sponsorElement.innerHTML = `
                 <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                    <div class="wpo-team-img">
+                     <div class="wpo-team-img hideable">
                         <div class="wpo-team-img-inner">
                             <img src="${sponsor.img}" alt="${sponsor.name}">
                         </div>
@@ -500,10 +503,10 @@
             sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
             sponsorElement.innerHTML = `
                 <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                    <div class="wpo-team-img">
-                        <div class="wpo-team-img-inner">
-                            <img src="${sponsor.img}" alt="${sponsor.name}">
-                        </div>
+                     <div class="wpo-team-img hideable">
+                            <div class="wpo-team-img-inner">
+                                <img src="${sponsor.img}" alt="${sponsor.name}">
+                            </div>
                     </div>
                     <div class="wpo-team-text">
                     <h4>${sponsor.name}</h4>
@@ -518,7 +521,14 @@
 
 
 
-
+// Auto-hide all elements AFTER they are added to the DOM
+document.querySelectorAll(".hideable").forEach(element => {
+    if (isHidden) {
+        element.classList.add("d-none"); // Hide elements
+    } else {
+        element.classList.remove("d-none"); // Show elements
+    }
+});
     </script>
 
 </body></html>
