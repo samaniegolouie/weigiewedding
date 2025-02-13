@@ -100,15 +100,14 @@
                                                 href="index.html">Home</a>                                            
                                         </li>
                                         <li class="">
-                                            <a class="active" href="Sponsor.html">Sponsors</a>                                            
+                                            <a  href="Sponsor.html">Sponsors</a>                                            
                                         </li>
-                                        <li><a  href="Bank.html">Banks</a></li>    
                                         <!-- <li class="menu-item-has-children">
                                             <a
                                                 href="#">Portfolio</a>                                       
                                         </li> -->
                                         
-                                        <li><a href="#Location">Location</a></li>                                        
+                                        <li><a class="active" href="Bank.html">Banks</a></li>                                        
                                     </ul>
 
                                 </div>
@@ -129,7 +128,7 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Sponsors</h2>
+                            <h2>Banks</h2>
                             <!-- <ol class="wpo-breadcumb-wrap">
                                 <li><a href="#">Home</a></li>
                                 <li>Planners</li>
@@ -145,52 +144,18 @@
         <section class="wpo-team-section-s2 section-padding">
             <div class="container">
                 <div class="wpo-section-title">
-                    <span>Our Sponsors</span>
-                    <h2>Awesome Pricipal</h2>
+                    <span>Our Banks List</span>                    
                 </div>
                 <div class="wpo-team-wrap mb-5">
                   <div class="row justify-content-center" id="sponsorsContainer"></div>
                 </div>
-                <div class="wpo-section-title mt-5 ">                
-                    <h2>Awesome Secondary</h2>
-                </div>
-                <div class="wpo-team-wrap">
-                    <div class="row justify-content-center" id="sponsorsContainersecondary">
-                        
-                    </div>
-                </div>
+                
 
-                <div class="wpo-team-wrap">
-                    <div class="row justify-content-center">
-                        <div class="col col-lg-2 col-md-3 col-sm-6 col-12">
-                            <div class="wpo-team-item wow fadeInUp" data-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: fadeInUp;">
-                                <div class="wpo-team-img hideable">
-                                    <div class="wpo-team-img">
-                                        <div class="wpo-team-img-inner">
-                                            <img src="./images/img-sponsor/Sponsor-img-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpo-team-text">
-                                    <h4>Jenny Wilson</h4>
-                                    <span class="text-black">Matron of Honor</span>
-                                </div>
-                            </div>
-                        </div>                      
-                    </div>
-                </div>
-
-                <div class="wpo-team-wrap">
-                    <div class="row justify-content-center" id="GroomsBridesContainersecondary">
-                        
-                    </div>
-                </div>
+               
+               
 
 
-                <div class="wpo-team-wrap">
-                    <div class="row justify-content-center" id="CandelCordVeilContainersecondary">                        
-                    </div>                   
-                </div>
+             
 
                 
 
@@ -455,16 +420,14 @@
   
         // JSON Data (normally from a separate file)  PRICIPAL
         const sponsors = [
-            { "name": "Jenny Wilson", "role": "", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },
-            { "name": "Robert Fox", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Annette Black", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Jenefer Abram", "role": "", "img": "./images/img-sponsor/Sponsor-img-4.jpg" },
-            { "name": "Michael Doe", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Sarah Smith", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Sarah Smith", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Sarah Smith", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Sarah Smith", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Sarah Smith", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "PNB Bank","img": "./images/banks/PNB.jpg" },
+            { "name": "BDO Bank","img": "./images/banks/BDO.jpg" },
+            { "name": "BPI Bank","img": "./images/banks/BPI.jpg" },
+            { "name": "UB Bank","img": "./images/banks/UB.jpg" },
+            { "name": "AUB Bank","img": "./images/banks/AUB.jpg" },
+            { "name": "Gcash Bank","img": "./images/banks/Gcash.jpg" },
+       
+          
         ];
 
         // Inject sponsors into HTML
@@ -472,139 +435,29 @@
 
         sponsors.forEach((sponsor, index) => {
             const sponsorElement = document.createElement("div");
-            sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
+            sponsorElement.classList.add("col","col-lg-4", "col-md-3", "col-sm-6", "col-12");
             sponsorElement.innerHTML = `
-                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                    <div class="wpo-team-img hideable">
-                        <div class="wpo-team-img-inner ">
-                            <img src="${sponsor.img}" alt="${sponsor.name}">
-                        </div>
-                    </div>
-                    <h4>${sponsor.name}</h4>
-                    <span>${sponsor.role}</span>
+                <div class="bank-images py-5">
+                <div class="image-container">
+                    <img src="${sponsor.img}" class="img-fluid" alt="${sponsor.name}">
+                     <span class="text-black text-center d-block mt-2">${sponsor.name}</span>
                 </div>
+               
+            </div>
+
+
+
+
+
+                        
+                 
             `;
             sponsorsContainer.appendChild(sponsorElement);
         });
 
 
 
-          // JSON Data (normally from a separate file) SECONDARY
-          const secondary = [
-            { "name": "Jenny Wilson", "role": "Best Man", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Robert Fox", "role": "Maid of Honor", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },
-            { "name": "Annette Black", "role": "Best Man", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jenefer Abram", "role": "Maid of Honor", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },            
-        ];
-
-        // Inject sponsors into HTML
-        const sponsorsContainersecondary = document.getElementById("sponsorsContainersecondary");
-
-        secondary.forEach((sponsor, index) => {
-            const sponsorElement = document.createElement("div");
-            sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
-            sponsorElement.innerHTML = `
-                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                     <div class="wpo-team-img hideable">
-                        <div class="wpo-team-img-inner">
-                            <img src="${sponsor.img}" alt="${sponsor.name}">
-                        </div>
-                    </div>
-                    <div class="wpo-team-text">
-                    <h4>${sponsor.name}</h4>
-                    <span class="text-black">${sponsor.role}</span>
-                    </div>
-                </div>
-            `;
-            sponsorsContainersecondary.appendChild(sponsorElement);
-        });
-
-
-
-
-          // JSON Data (normally from a separate file) SECONDARY
-          const GroomsBrides = [
-            { "name": "Jenny Wilson", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Robert Fox", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Annette Black", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jenefer Abram", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },   
-            { "name": "Jenny Wilson", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Robert Fox", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Annette Black", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jenefer Abram", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Jenefer Abram", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Jenefer Abram", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Jenefer Abram", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Jenefer Abram", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Jenefer Abram", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Jenefer Abram", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Jenefer Abram", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Jenefer Abram", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-        ];
-
-        // Inject sponsors into HTML
-        const GroomsBridesContainersecondary = document.getElementById("GroomsBridesContainersecondary");
-
-        GroomsBrides.forEach((sponsor, index) => {
-            const sponsorElement = document.createElement("div");
-            sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
-            sponsorElement.innerHTML = `
-                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                     <div class="wpo-team-img hideable">
-                        <div class="wpo-team-img-inner">
-                            <img src="${sponsor.img}" alt="${sponsor.name}">
-                        </div>
-                    </div>
-                    <div class="wpo-team-text">
-                    <h4>${sponsor.name}</h4>
-                    <span class="text-black">${sponsor.role}</span>
-                    </div>
-                </div>
-            `;
-            GroomsBridesContainersecondary.appendChild(sponsorElement);
-        });
-
-
-
-
-          // JSON Data (normally from a separate file) CANDLE CORD VEIL
-          const CandelCordVeil = [
-            { "name": "Jenny Wilson", "role": "Candle", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Robert Fox", "role": "Candle", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Annette Black", "role": "Cord", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jenefer Abram", "role": "Cord", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },   
-            { "name": "Jenny Wilson", "role": "Veil", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Robert Fox", "role": "Veil", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Robert Fox", "role": "Bible", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Robert Fox", "role": "Bible", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Robert Fox", "role": "Coin", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Robert Fox", "role": "Coin", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Robert Fox", "role": "Ring", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Robert Fox", "role": "Ring", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-              
-        ];
-
-        // Inject sponsors into HTML
-        const CandelCordVeilContainersecondary = document.getElementById("CandelCordVeilContainersecondary");
-
-        CandelCordVeil.forEach((sponsor, index) => {
-            const sponsorElement = document.createElement("div");
-            sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
-            sponsorElement.innerHTML = `
-                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
-                     <div class="wpo-team-img hideable">
-                            <div class="wpo-team-img-inner">
-                                <img src="${sponsor.img}" alt="${sponsor.name}">
-                            </div>
-                    </div>
-                    <div class="wpo-team-text">
-                    <h4>${sponsor.name}</h4>
-                    <span class="text-black">${sponsor.role}</span>
-                    </div>
-                </div>
-            `;
-            CandelCordVeilContainersecondary.appendChild(sponsorElement);
-        });
+         
 
 
 
