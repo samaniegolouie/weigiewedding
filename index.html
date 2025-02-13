@@ -119,7 +119,7 @@
                                             </ul>
                                         </li> -->
                                         
-                                        <li><a href="#">Location</a></li>                                        
+                                        <li><a href="#Location">Location</a></li>                                        
                                     </ul>
 
                                 </div><!-- end of nav-collapse -->
@@ -731,12 +731,12 @@
                             </div>
                         </div>
 
-                        <div class="col col-lg-12 col-md-12 col-12">
-                        <div class="text-center">
-                            <img src="./images/mapsanpedro.png"
-                            alt="">
+                        <div id="Location" class="col col-lg-12 col-md-12 col-12">
+                                <div class="text-center">
+                                    <img src="./images/mapsanpedro.png"
+                                    alt="">
                                 </div>
-                                </div>
+                        </div>
                         
                     </div>
                 </div>
@@ -842,13 +842,31 @@
                                 <div class="link-wrap">
                                     <ul>
                                         <li><a href="#">PNB Bank</a></li>
-                                        <li><a href="#">BDO Bank</a></li>
-                                        <li><a href="#">BPI Bank</a></li>
+                                        <li>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModalBDO">                                                
+                                                BDO Bank
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModalBPI">                                                
+                                                BPI Bank
+                                            </a>
+                                        </li>
+                                    
+                                       
                                     </ul>
                                     <ul>
-                                        <li><a href="#">AUB Bank</a></li>
-                                        <li><a href="3">UB Bank</li>
-                                        <li><a href="#">GCASH</a></li>
+                                        <li>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModalUB">                                                
+                                                AUB Bank
+                                            </a>
+                                        </li>                                        
+                                        <li><a href="3">UB Bank</a></li>                                        
+                                        <li>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModalGcash">                                                
+                                                Gcash
+                                            </a>
+                                        </li>     
                                     </ul>
                                 </div>
                             </div>
@@ -900,7 +918,7 @@
                     <div class="row">
                         <div class="col col-xs-12">
                             <p class="copyright"> © Copyright 2025 | <a
-                                    href="https://wpocean.com/html/tf/habibi/index.html">Louie & regina</a> | All right
+                                    href="#">Louie & regina</a> | All right
                                 reserved.</p>
                         </div>
                     </div>
@@ -942,6 +960,44 @@
 
     </div>
     <!-- end of page-wrapper -->
+
+     <!-- Bootstrap Modal -->
+     <div class="modal fade" id="imageModalBDO" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="./images/banks/BDO.jpg" alt="BDO Bank" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="modal fade" id="imageModalBPI" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="./images/banks/BPI.jpg" alt="BDO Bank" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="modal fade" id="imageModalUB" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="./images/banks/UB.jpg" alt="BDO Bank" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="modal fade" id="imageModalGcash" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="./images/banks/Gcash.jpg" alt="BDO Bank" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- All JavaScript files
     ================================================== -->
