@@ -62,6 +62,46 @@
         .flaticon-left-arrow:before {
             content: "\e629";
         }
+
+        
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+    }
+
+    /* Play button styling */
+    .play-button {
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #C8A898;    
+    background: rgba(54, 191, 163, 0.2); /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Border for glass effect */
+    border-radius: 12px;
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.play-button:hover {
+    background: rgba(255, 255, 255, 0.4); /* Brighter glass effect */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+.play-icon {
+    font-size: 20px; /* Slightly larger icon */
+    color: #69b8a3a9;
+}
     </style>
 </head>
 
@@ -360,7 +400,7 @@
                                 style="visibility: hidden; animation-duration: 1700ms; animation-name: none;">
                                 <span>January 2011</span>
                                 <h2>How we meet</h2>
-                                <p>Long time ago, in a far far away land of Crimson. There is a wizard living secretly in an kodnub called golteb. He then decided to see the kingdom of oyot to try to tame the greatest dragoness of oyot.</p>
+                                <p>Long time ago, in a far far away land of Crimson. There is a wizard living secretly in an kodnub called golteb. He then decided to see the kingdom of oyot to try to capture the heart of the greatest dragoness of oyot.</p>
                             </div>
                         </div>
                     </div>
@@ -384,11 +424,15 @@
                         <div class="wpo-story-content">
                             <div class="wpo-story-content-inner wow fadeInLeftSlow" data-wow-duration="1700ms"
                                 style="visibility: hidden; animation-duration: 1700ms; animation-name: none;">
-                                <span>17 May, 2024</span>
+                                <span>15 May, 2011</span>
                                 <h2>He proposed, I said yes</h2>
-                                <p>Consectetur adipiscing elit. Fringilla at risus orci, tempus facilisi sed. Enim
-                                    tortor, faucibus netus orci donec volutpat adipiscing. Sit condimentum elit
-                                    convallis libero. Nunc in eu tellus ipsum placerat.</p>
+                                <p>During our 13th anniversary celebration in Tagaytay, he surprised me with an unexpected gift. In the most unusual and unique way, he proposed—something I never saw coming. It was an epic moment, filled with love and excitement, and captured perfectly in the video below. 💍❤️ #AngAlamatNgSayoNaLangTo</p>
+                                    <!-- <button class="play-button" onclick="openModal()">
+                                        <span class="play-icon">&#9658;</span> Play Video
+                                    </button> -->
+                                    <button class="play-button" onclick="openVideoModal('https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/wredge/videos/967407781379228&show_text=0&width=560')">
+                                        <span class="play-icon">&#9658;</span>Play Video
+                                    </button>
                             </div>
                         </div>
                     </div>
@@ -406,11 +450,15 @@
                         <div class="wpo-story-content">
                             <div class="wpo-story-content-inner wow fadeInRightSlow" data-wow-duration="1700ms"
                                 style="visibility: hidden; animation-duration: 1700ms; animation-name: none;">
-                                <span>17 May, 2025</span>
+                                <span>17 May, 2024</span>
                                 <h2>Our Engagement Day</h2>
-                                <p>Consectetur adipiscing elit. Fringilla at risus orci, tempus facilisi sed. Enim
-                                    tortor, faucibus netus orci donec volutpat adipiscing. Sit condimentum elit
-                                    convallis libero. Nunc in eu tellus ipsum placerat.</p>
+                                <p>During our 13th anniversary celebration in Tagaytay, he surprised me with an unexpected gift. In the most unusual and unique way, he proposed—something I never saw coming. It was an epic moment, filled with love and excitement, and captured perfectly in the video below. 💍❤️ #AngAlamatNgSayoNaLangTo</p>
+                                <!-- <button class="play-button" onclick="openModal()">
+                                    <span class="play-icon">&#9658;</span> Play Video
+                                </button> -->
+                                <button class="play-button" onclick="openVideoModal('https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/wredge/videos/967407781379228&show_text=0&width=560')">
+                                    <span class="play-icon">&#9658;</span>Play Video
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -684,18 +732,19 @@
                                 </div>
                                 <div class="wpo-event-text">
                                     <div class="title">
-                                        <h2>The Reception</h2>
+                                        <h2>The Preparation</h2>
                                     </div>
                                     <ul>
-                                        <li>Satuday, 17 May 2025 <br>
+                                        <li>Saturday, 17 May 2025 <br>
                                             1:00 PM – 2:30 PM</li>
-                                        <li>Holiday Hills, San Antonio Beside SMI High School, San Pedro, Philippines</li>
-                                        <li>0919 444 2327</li>
+                                            <li>Holiday Hills, San Antonio Beside SMI High School, San Pedro, Philippines</li>
+                                            <li>0919 444 2327</li>
                                         <li> <a class="popup-gmaps"
                                             href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d121.0505642!3d14.3667173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d0c41f0aaf43%3A0x28b341c1100b114e!2z7+Maharlika+St,+San+Pedro,+4023+Laguna!5e0!3m2!1sen!2sph!4v1503742051881">See
-                                                Location</a></li>
+                                            Location</a></li>
                                     </ul>
                                 </div>
+                               
                             </div>
                         </div>
                         <div class="col col-lg-4 col-md-6 col-12">
@@ -712,12 +761,12 @@
                                         <h2>The Ceremony</h2>
                                     </div>
                                     <ul>
-                                        <li>Satuday, 17 May 2025 <br>
+                                        <li>Saturday, 17 May 2025 <br>
                                             1:00 PM – 2:30 PM</li>
-                                            <li>Holiday Hills, San Antonio Beside SMI High School, San Pedro, Philippines</li>
-                                            <li>0919 444 2327</li>
+                                        <li>Holiday Hills, San Antonio Beside SMI High School, San Pedro, Philippines</li>
+                                        <li>0919 444 2327</li>
                                         <li> <a class="popup-gmaps"
-                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25211.21212385712!2d144.95275648773628!3d-37.82748510398018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e0!2zTWVsYm91cm5lIFZJQyAzMDA0LCDgpoXgprjgp43gpp_gp43gprDgp4fgprLgpr_gpq_gprzgpr4!5e0!3m2!1sbn!2sbd!4v1503742051881">See
+                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d121.0505642!3d14.3667173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d0c41f0aaf43%3A0x28b341c1100b114e!2z7+Maharlika+St,+San+Pedro,+4023+Laguna!5e0!3m2!1sen!2sph!4v1503742051881">See
                                                 Location</a></li>
                                     </ul>
                                 </div>
@@ -734,16 +783,16 @@
                                 </div>
                                 <div class="wpo-event-text">
                                     <div class="title">
-                                        <h2>The Party</h2>
+                                        <h2>The Reception</h2>
                                     </div>
                                     <ul>
-                                        <li>Satuday, 17 May 2025 <br>
+                                        <li>Saturday, 17 May 2025 <br>
                                             1:00 PM – 2:30 PM</li>
                                             <li>Holiday Hills, San Antonio Beside SMI High School, San Pedro, Philippines</li>
                                             <li>0919 444 2327</li>
                                         <li> <a class="popup-gmaps"
-                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25211.21212385712!2d144.95275648773628!3d-37.82748510398018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e0!2zTWVsYm91cm5lIFZJQyAzMDA0LCDgpoXgprjgp43gpp_gp43gprDgp4fgprLgpr_gpq_gprzgpr4!5e0!3m2!1sbn!2sbd!4v1503742051881">See
-                                                Location</a></li>
+                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d121.0505642!3d14.3667173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d0c41f0aaf43%3A0x28b341c1100b114e!2z7+Maharlika+St,+San+Pedro,+4023+Laguna!5e0!3m2!1sen!2sph!4v1503742051881">See
+                                            Location</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -901,7 +950,7 @@
                         <div class="col col-xl-6 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <a class="logo" href="https://wpocean.com/html/tf/habibi/index.html">Louie & Regina</a>
+                                    <a class="logo" href="h#">Louie & Regina</a>
                                 </div>
                                 <p>We can’t wait to see all of our beloved friends
                                     and relative s at our wedding.</p>
@@ -988,7 +1037,8 @@
     </div>
     <!-- end of page-wrapper -->
 
-     <!-- Bootstrap Modal -->
+
+     <!-- Bootstrap Modal Banks-->
      <div class="modal fade" id="imageModalBDO" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -1043,6 +1093,18 @@
             </div>
         </div>
     </div>
+
+<!-- Modal structure Video -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <iframe id="videoFrame" style="width: 100%; height: 70vh;" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- All JavaScript files
     ================================================== -->
@@ -1111,6 +1173,24 @@
         </div>
     </div>
 </body>
+
+<script>
+function openVideoModal(videoUrl) {
+    const videoModal = new bootstrap.Modal(document.getElementById("videoModal"));
+    document.getElementById("videoFrame").src = videoUrl;
+    videoModal.show();
+}
+
+function closeVideoModal() {
+    document.getElementById("videoFrame").src = ""; // Clear the iframe src to stop the video
+}
+
+
+    // function closeModal() {
+    //     document.getElementById("videoModal").style.display = "none";
+    //     document.getElementById("videoFrame").src = ""; // Stop the video when closing
+    // }
+</script> 
 
 
 
