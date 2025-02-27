@@ -354,7 +354,7 @@ img {
   width: 100%;
   color: #fff;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 16px;;
   text-align: center;
   display: none;
 }
@@ -29807,3 +29807,12 @@ a.ui-button:active, .ui-button:active,
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+.hastag-text{
+  margin:0px;
+  padding: 0px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.4em;
+
+}
