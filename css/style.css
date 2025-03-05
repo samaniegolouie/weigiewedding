@@ -29816,3 +29816,8 @@ a.ui-button:active, .ui-button:active,
   line-height: 1.4em;
 
 }
+.italic-text{
+  font-style: italic !important;
+  font-weight: bold !important;
+  font-weight: 500 !important;
+}
