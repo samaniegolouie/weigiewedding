@@ -156,6 +156,7 @@
                                         <li class="">
                                             <a href="Sponsor.html">Sponsors</a>                                            
                                         </li>
+                                        <li><a class="" href="Gallery.html">Gallery</a></li>  
                                         <!-- <li class="menu-item-has-children">
                                             <a
                                                 href="#">Portfolio</a>
@@ -1148,6 +1149,8 @@
         // Set the target date for the countdown
         const targetDate = new Date("May 17, 2025 00:00:00").getTime();
     
+        // const targetDate = new Date("May 17, 2025 00:00:00").getTime();
+    
         // Update the countdown every second
         const countdown = setInterval(function() {
             const now = new Date().getTime();
@@ -1168,7 +1171,9 @@
             // If the countdown is over, display "EXPIRED"
             if (distance < 0) {
                 clearInterval(countdown);
-                document.getElementById("clock1").innerHTML = "EXPIRED";
+                document.getElementById("clock1").innerHTML = `
+        <img src="images/CLIPLY_372109170_FREE_FIREWORKS_1000.gif" alt="Expired" style="width: 300px; height: auto; position:absolute; top:300px;">`;
+                // document.getElementById("clock1").innerHTML = "EXPIRED";
             }
         }, 1000);
     </script>
