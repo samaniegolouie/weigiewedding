@@ -205,6 +205,17 @@
                 </div>
 
                 
+                <div class="wpo-team-wrap">
+                    <div class="row justify-content-center" id="LittleGsecondary">                        
+                    </div>                   
+                </div>
+
+                <div class="wpo-team-wrap">
+                    <div class="row justify-content-center" id="FlowerBoyssecondary">                        
+                    </div>                   
+                </div>
+
+                
 
                 <div class="row mt-5">
                     <div class="col-12 col-md-8 d-flex justify-content-center">
@@ -501,6 +512,8 @@
         const sponsors = [      
             { "name": "Roberto Grajo", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
             { "name": "Andrea  Grajo", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Emilio Virtudes", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Lutgarda-Glenda  Virtudes", "role": "", "img": "./images/img-sponsor/Sponsor-img-4.jpg" },
             { "name": "Noel Samaniego", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
             { "name": "Lorna Samaniego", "role": "", "img": "./images/img-sponsor/Sponsor-img-4.jpg" },
             { "name": "Domingo Garcia", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
@@ -508,7 +521,8 @@
             { "name": "Salvador López Cadenas ", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
             { "name": "Nelita Pada Bidés", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
             { "name": "Ryan Conde", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Mary Anne Conde", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Mary Anne Conde", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },         
+            { "name": "Tomas Espiritu", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
             { "name": "Mercy Bo", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
         ];
 
@@ -651,6 +665,72 @@
             `;
             CandelCordVeilContainersecondary.appendChild(sponsorElement);
         });
+
+         // JSON Data (normally from a separate file)  Little Groom and Bride
+         const LittleG = [
+            { "name": "Mat Samaniego", "role": "Little Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Athara Samaniego", "role": "Little Bride", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Abu Bides", "role": "Little Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Jhyraine Bides", "role": "Little Bride", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+             
+            
+              
+        ];
+
+        // Inject sponsors into HTML
+        const LittleGsecondary = document.getElementById("LittleGsecondary");
+
+        LittleG.forEach((sponsor, index) => {
+            const sponsorElement = document.createElement("div");
+            sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
+            sponsorElement.innerHTML = `
+                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
+                     <div class="wpo-team-img hideable">
+                            <div class="wpo-team-img-inner">
+                                <img src="${sponsor.img}" alt="${sponsor.name}">
+                            </div>
+                    </div>
+                    <div class="wpo-team-text">
+                    <h4>${sponsor.name}</h4>
+                    <span class="text-black">${sponsor.role}</span>
+                    </div>
+                </div>
+            `;
+            LittleGsecondary.appendChild(sponsorElement);
+        });
+
+         // JSON Data (normally from a separate file)  Flower Boys
+         const FlowerBoys = [
+            { "name": "Atong Bides", "role": "Flower Boys", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Den-Den Bides", "role": "Flower Boys", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Francis Bides", "role": "Flower Boys", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+         
+            
+              
+        ];
+
+        // Inject sponsors into HTML
+        const FlowerBoyssecondary = document.getElementById("FlowerBoyssecondary");
+
+        FlowerBoys.forEach((sponsor, index) => {
+            const sponsorElement = document.createElement("div");
+            sponsorElement.classList.add("col","col-lg-2", "col-md-3", "col-sm-6", "col-12");
+            sponsorElement.innerHTML = `
+                <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
+                     <div class="wpo-team-img hideable">
+                            <div class="wpo-team-img-inner">
+                                <img src="${sponsor.img}" alt="${sponsor.name}">
+                            </div>
+                    </div>
+                    <div class="wpo-team-text">
+                    <h4>${sponsor.name}</h4>
+                    <span class="text-black">${sponsor.role}</span>
+                    </div>
+                </div>
+            `;
+            FlowerBoyssecondary.appendChild(sponsorElement);
+        });
+
 
 
 
