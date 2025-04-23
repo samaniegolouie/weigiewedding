@@ -867,39 +867,8 @@
             <div class="container">
               <h2 class="visually-hidden">Partners</h2>
               <div id="partnerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row text-center">
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/amazing-smile-ph.jpg" class="img-fluid" alt="Partner 1">
-                      </div>
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/Classic Palm Tattoo Studio.jpg" class="img-fluid" alt="Partner 2">
-                      </div>
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/MT Digital Photo & Films.jpg" class="img-fluid" alt="Partner 3">
-                      </div>
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/Sleight Tattoo & Haircut.jpg" class="img-fluid" alt="Partner 4">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row text-center">
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/amazing-smile-ph.jpg" class="img-fluid" alt="Partner 5">
-                      </div>
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/Classic Palm Tattoo Studio.jpg" class="img-fluid" alt="Partner 1 again">
-                      </div>
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/MT Digital Photo & Films.jpg" class="img-fluid" alt="Partner 2 again">
-                      </div>
-                      <div class="col-6 col-md-3">
-                        <img src="images/parteners/Sleight Tattoo & Haircut.jpg" class="img-fluid" alt="Partner 3 again">
-                      </div>
-                    </div>
-                  </div>
+                <div class="carousel-inner" id="carousel-inner">
+                  <!-- Slides will be generated dynamically -->
                 </div>
           
                 <!-- Controls -->
@@ -914,6 +883,8 @@
               </div>
             </div>
           </section>
+          
+          
 
         <!--END LOGO SPONSORS TEAM-->
 
@@ -1303,6 +1274,42 @@ function closeVideoModal() {
     //     document.getElementById("videoFrame").src = ""; // Stop the video when closing
     // }
 </script> 
+
+
+<script>
+    const partnerImages = [
+      { src: 'images/parteners/amazing-smile-ph.jpg', alt: 'Amazing Smile PH' },
+      { src: 'images/parteners/Classic Palm Tattoo Studio.jpg', alt: 'Classic Palm Tattoo Studio' },
+      { src: 'images/parteners/MT Digital Photo and Films.jpg', alt: 'MT Digital Photo & Films' },
+      { src: 'images/parteners/Sleight Tattoo & Haircut.jpg', alt: 'Sleight Tattoo & Haircut' },
+      { src: 'images/parteners/Nanas Event Rentals.jpg', alt: 'Amazing Smile PH again' },
+      { src: 'images/parteners/Scents For Events.jpg', alt: 'Classic Palm again' },
+    ];
+  
+    const isMobile = window.innerWidth < 768;
+    const container = document.getElementById('carousel-inner');
+    const itemsPerSlide = isMobile ? 1 : 4;
+  
+    for (let i = 0; i < partnerImages.length; i += itemsPerSlide) {
+      const item = document.createElement('div');
+      item.className = 'carousel-item' + (i === 0 ? ' active' : '');
+  
+      const row = document.createElement('div');
+      row.className = 'row text-center justify-content-center';
+  
+      partnerImages.slice(i, i + itemsPerSlide).forEach(img => {
+        const col = document.createElement('div');
+        col.className = isMobile ? 'col-12 mb-4' : 'col-3 mb-4';
+        col.innerHTML = `<img src="${img.src}" alt="${img.alt}" class="img-fluid">`;
+        row.appendChild(col);
+      });
+  
+      item.appendChild(row);
+      container.appendChild(item);
+    }
+  </script>
+  
+
 
 
 
