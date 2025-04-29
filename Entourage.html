@@ -109,7 +109,7 @@
                                                 href="index.html">Home</a>                                            
                                         </li>
                                         <li class="">
-                                            <a class="active" href="Sponsor.html">Sponsors</a>                                            
+                                            <a class="active" href="Entourage.html">Entourage</a>                                            
                                         </li>
                                         <li><a class="" href="Gallery.html">Gallery</a></li>  
                                         <li><a  href="Bank.html">Banks</a></li>    
@@ -141,7 +141,7 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="wpo-breadcumb-wrap">
-                            <h2>Sponsors</h2>
+                            <h2>Entourage</h2>
                             <!-- <ol class="wpo-breadcumb-wrap">
                                 <li><a href="#">Home</a></li>
                                 <li>Planners</li>
@@ -157,12 +157,21 @@
         <section class="wpo-team-section-s2 section-padding">
             <div class="container">
                 <div class="wpo-section-title">
-                    <span>Our Sponsors</span>
+                    <span>Our Entourage</span>                  
+                </div>
+
+                <div class="wpo-team-wrap mb-5">
+                    <div class="row justify-content-center" id="ParentsInformationssecondary"></div>
+                  </div> 
+
+
+
+                <div class="wpo-section-title mt-5 ">                
                     <h2>Awesome Principal</h2>
                 </div>
                 <div class="wpo-team-wrap mb-5">
                   <div class="row justify-content-center" id="sponsorsContainer"></div>
-                </div>
+                </div>            
                 <div class="wpo-section-title mt-5 ">                
                     <h2>Awesome Secondary</h2>
                 </div>
@@ -558,6 +567,8 @@
             { "name": "Alyn Bides", "role": "Maid of Honor", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },            
         ];
 
+
+
         // Inject sponsors into HTML
         const sponsorsContainersecondary = document.getElementById("sponsorsContainersecondary");
 
@@ -579,6 +590,13 @@
             `;
             sponsorsContainersecondary.appendChild(sponsorElement);
         });
+
+
+
+
+
+
+        
 
 
 
@@ -707,7 +725,7 @@
          
             
               
-        ];
+        ];        
 
         // Inject sponsors into HTML
         const FlowerBoyssecondary = document.getElementById("FlowerBoyssecondary");
@@ -731,17 +749,44 @@
             FlowerBoyssecondary.appendChild(sponsorElement);
         });
 
+       // JSON Data (normally from a separate file) Flower Boys
+const ParentsInformation = [
+    { "name": "Melchor D. Samaniego ✟", "role": "Father of the Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+    { "name": "Yolanda B. Samaniego", "role": "Mother of the Groom", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+    { "name": "Renato B. Bides ✟", "role": "Father of the Bride", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+    { "name": "Virgina L. Bides", "role": "Mother of the Bride", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+    { "name": "Jomel B. Samaniego", "role": "Brother with Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+    { "name": "Allan L. Bides", "role": "Brother with Bride", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+    { "name": "Rev. Chistoper Sablay", "role": "Officiating Minister", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+];
 
+const ParentsInformationssecondary = document.getElementById("ParentsInformationssecondary");
 
+ParentsInformation.forEach((sponsor, index) => {
+    const sponsorElement = document.createElement("div");
+    sponsorElement.classList.add("col", "col-lg-2", "col-md-3", "col-sm-6", "col-12");
+    sponsorElement.innerHTML = `
+        <div class="wpo-team-item wow fadeInUp" data-wow-duration="${1000 + (index * 200)}ms" style="visibility: visible; animation-duration: ${1000 + (index * 200)}ms; animation-name: fadeInUp;">
+            <div class="wpo-team-img hideable">
+                <div class="wpo-team-img-inner">
+                    <img src="${sponsor.img}" alt="${sponsor.name}">
+                </div>
+            </div>
+            <div class="wpo-team-text">
+                <h4>${sponsor.name}</h4>
+                <span class="text-black">${sponsor.role}</span>
+            </div>
+        </div>
+    `;
+    ParentsInformationssecondary.appendChild(sponsorElement);
+});
 
-
-
-// Auto-hide all elements AFTER they are added to the DOM
+// Then after all elements are added
 document.querySelectorAll(".hideable").forEach(element => {
     if (isHidden) {
-        element.classList.add("d-none"); // Hide elements
+        element.classList.add("d-none");
     } else {
-        element.classList.remove("d-none"); // Show elements
+        element.classList.remove("d-none");
     }
 });
     </script>
