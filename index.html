@@ -31,7 +31,8 @@
  
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    
+    
 
 
     <link href="./css/themify-icons.css" rel="stylesheet">
@@ -115,6 +116,36 @@
     font-size: 20px; /* Slightly larger icon */
     color: #69b8a3a9;
 }
+
+.glass-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* backdrop-filter: blur(10px); */
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: white;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    .glass-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+
+
+
+
+
     </style>
 </head>
 
@@ -167,7 +198,7 @@
                                                 href="index.html">Home</a>                                            
                                         </li>
                                         <li class="">
-                                            <a href="Sponsor.html">Sponsors</a>                                            
+                                            <a href="Entourage.html">Entourage</a>                                            
                                         </li>
                                         <li><a class="" href="Gallery.html">Gallery</a></li>  
                                         <!-- <li class="menu-item-has-children">
@@ -245,6 +276,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="static-hero-right">
                 <div class="static-hero-img scene" id="scene"
                     style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative;">
@@ -287,8 +319,35 @@
                     </path>
                 </svg>
             </div>
+
         </section>
         <!-- end of hero slider -->
+<!-- 
+        <section class="wpo-video-section pb-0 section-padding">
+            <div class="container-fluid">
+                <div class="video-wrap" style="position: relative; display: inline-block;">
+                    <img src="images/prenup/DSC01288.JPG" alt="" style="width: 100%; height: auto;">
+                    <a href="" class="video-btn" data-type="iframe" data-bs-toggle="modal" data-bs-target="#videoModalSavetheDate"style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-decoration: none; color: white; font-size: 50px;">
+                       <span style = "position: absolute; top: 0%; left: 35%;">▶</span> 
+                    </a>
+                </div>
+            </div>
+        </section> -->
+        <section class="wpo-video-section pb-0 section-padding">
+            <div class="container-fluid">
+                <div class="video-wrap position-relative d-inline-block">
+                    <img src="images/prenup/DSC01288.JPG" alt="" class="img-fluid w-100">
+        
+                    <!-- Glass Button -->
+                    <a href="#" class="video-btn glass-button" data-bs-toggle="modal" data-bs-target="#videoModalSavetheDate">
+                        ▶
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        
         <!-- start couple-section -->
         <section class="wpo-couple-section section-padding" id="couple">
             <div class="container">
@@ -969,6 +1028,10 @@
         </section> -->
         
         <!-- end wpo-blog-section -->
+<!-- Modal -->
+
+
+
 
         <!-- start of wpo-site-footer-section -->
         <footer class="wpo-site-footer">
@@ -1169,9 +1232,37 @@
             </div>
         </div>
     </div>
+     <!-- <div class="modal fade" id="videoModalSavetheDate" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="./images/banks/AUB.jpg" alt="BDO Bank" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ================================================= -->
+    <div class="modal fade" id="videoModalSavetheDate" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+              <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="ratio ratio-16x9">
+                <video id="savethedateVideo" class="w-100 h-100" controls autoplay muted playsinline>
+                  <source src="video/Regina and Louie Enchantment Request.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
 <!-- Modal structure Video -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+<!-- <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body text-center">
@@ -1180,7 +1271,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
     <!-- All JavaScript files
     ================================================== -->
@@ -1234,10 +1325,8 @@
 
          <!-- Font Awesome JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    
 
     <audio class="audio-output" style="display: none;"></audio>
     <div id="volume-booster-visusalizer">
@@ -1257,7 +1346,7 @@
     </div>
 </body>
 
-<script>
+<!-- <script>
 function openVideoModal(videoUrl) {
     const videoModal = new bootstrap.Modal(document.getElementById("videoModal"));
     document.getElementById("videoFrame").src = videoUrl;
@@ -1273,7 +1362,7 @@ function closeVideoModal() {
     //     document.getElementById("videoModal").style.display = "none";
     //     document.getElementById("videoFrame").src = ""; // Stop the video when closing
     // }
-</script> 
+</script>  -->
 
 
 <script>
@@ -1282,8 +1371,10 @@ function closeVideoModal() {
       { src: 'images/parteners/Classic Palm Tattoo Studio.jpg', alt: 'Classic Palm Tattoo Studio' },
       { src: 'images/parteners/MT Digital Photo and Films.jpg', alt: 'MT Digital Photo & Films' },
       { src: 'images/parteners/Sleight Tattoo & Haircut.jpg', alt: 'Sleight Tattoo & Haircut' },
-      { src: 'images/parteners/Nanas Event Rentals.jpg', alt: 'Amazing Smile PH again' },
-      { src: 'images/parteners/Scents For Events.jpg', alt: 'Classic Palm again' },
+      { src: 'images/parteners/Bobby Arts Statue.jpg', alt: 'Bobby Arts Statue' },
+      { src: 'images/parteners/Scents For Events.jpg', alt: 'Scents For Events' },
+      { src: 'images/parteners/Brew Buddy Cafe.png', alt: 'Brew Buddy Cafe' },
+      { src: 'images/parteners/Lennard Antonio.jpg', alt: 'Lennard Antonio' },
     ];
   
     const isMobile = window.innerWidth < 768;
@@ -1307,8 +1398,30 @@ function closeVideoModal() {
       item.appendChild(row);
       container.appendChild(item);
     }
+
+      // JavaScript to load the video dynamically into the iframe
+//   const videoModal = document.getElementById('videoModal');
+//   const videoIframe = document.getElementById('videoIframe');
+//   const videoUrl = "https://www.youtube.com/embed/s4dWp9_nNYk?autoplay=1";
+
+//   videoModal.addEventListener('show.bs.modal', () => {
+//     videoIframe.src = videoUrl;
+//   });
+
+//   videoModal.addEventListener('hide.bs.modal', () => {
+//     videoIframe.src = "";
+//   });
   </script>
   
+
+
+  <script>
+    const videoModal = document.getElementById('videoModalSavetheDate');
+    videoModal.addEventListener('hidden.bs.modal', function () {
+        const iframe = document.getElementById('savethedateVideo');
+        iframe.src = iframe.src; // Reset to stop video
+    });
+</script>
 
 
 
