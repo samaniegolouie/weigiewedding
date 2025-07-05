@@ -515,26 +515,26 @@
 
     <script>
 
-        let isHidden = true; // Global variable to track visibility  
+        let isHidden = false; // Global variable to track visibility  
   
         // JSON Data (normally from a separate file)  PRICIPAL
         const sponsors = [      
-            { "name": "Roberto Grajo", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Andrea  Grajo", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Emilio Virtudes", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Lutgarda-Glenda  Virtudes", "role": "", "img": "./images/img-sponsor/Sponsor-img-4.jpg" },
-            { "name": "Noel Samaniego", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Lorna Samaniego", "role": "", "img": "./images/img-sponsor/Sponsor-img-4.jpg" },
-            { "name": "Domingo Garcia", "role": "", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Janice Garcia", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Salvador López Cadenas ", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Nelita Pada Bidés", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Ryan Conde", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Mary Anne Conde", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },         
-            { "name": "Tomas Espiritu", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Mercy Bo", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Willy Jacildo", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Amy Jacildo", "role": "", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Roberto Grajo", "role": "", "img": "./images/img-sponsor/robert.jpg" },
+            { "name": "Andrea  Grajo", "role": "", "img": "./images/img-sponsor/andeng.jpg" },
+            { "name": "Emilio Virtudes", "role": "", "img": "./images/img-sponsor/emile.jpg" },
+            { "name": "Lutgarda-Glenda  Virtudes", "role": "", "img": "./images/img-sponsor/genda.jpg" },
+            { "name": "Noel Samaniego", "role": "", "img": "./images/img-sponsor/NOel.jpg" },
+            { "name": "Lorna Samaniego", "role": "", "img": "./images/img-sponsor/Lorna.jpg" },
+            { "name": "Domingo Garcia", "role": "", "img": "./images/img-sponsor/domeng.jpg" },
+            { "name": "Janice Garcia", "role": "", "img": "./images/img-sponsor/janies.jpg" },
+            { "name": "Salvador López Cadenas ", "role": "", "img": "./images/img-sponsor/salva.jpg" },
+            { "name": "Nelita Pada Bidés", "role": "", "img": "./images/img-sponsor/nelia.jpg" },
+            { "name": "Ryan Conde", "role": "", "img": "./images/img-sponsor/ryan.jpg" },
+            { "name": "Mary Anne Conde", "role": "", "img": "./images/img-sponsor/anna.jpg" },         
+            { "name": "Tomas Espiritu", "role": "", "img": "./images/img-sponsor/tom.jpg" },
+            { "name": "Mercy Bo", "role": "", "img": "./images/img-sponsor/Mercy.jpg" },
+            { "name": "Willy Jacildo", "role": "", "img": "./images/img-sponsor/will.jpg" },
+            { "name": "Amy Jacildo", "role": "", "img": "./images/img-sponsor/Ammy.jpg" },
         ];
 
         
@@ -563,10 +563,10 @@
 
           // JSON Data (normally from a separate file) SECONDARY
           const secondary = [
-            { "name": "Mike Samaniego", "role": "Best Man", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Katherine Samaniego", "role": "Matron of Honor", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },
-            { "name": "Jericho Mancia", "role": "Best Man", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Alyn Bides", "role": "Maid of Honor", "img": "./images/img-sponsor/Sponsor-img-1.jpg" },            
+            { "name": "Mike Samaniego", "role": "Best Man", "img": "./images/img-sponsor/mike.jpg" },
+            { "name": "Katherine Samaniego", "role": "Matron of Honor", "img": "./images/img-sponsor/kat.jpg" },
+            { "name": "Jericho Mancia", "role": "Best Man", "img": "./images/img-sponsor/kiko.jpg" },
+            { "name": "Alyn Bides", "role": "Maid of Honor", "img": "./images/img-sponsor/alyn.jpg" },            
         ];
 
 
@@ -605,22 +605,22 @@
 
           // JSON Data (normally from a separate file) SECONDARY
           const GroomsBrides = [
-            { "name": "Cristian Villarica", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jennifer Bascruz", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Regienald Dizon", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Fretzie Basanez", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },   
-            { "name": "Alvin Bides", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Irene Bendijo", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Neil Patrick Morales", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jasmin Gajero", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Daryl Tiampong", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Vina Laviste Condes", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Austin Nicomedez", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Marife Mendavia", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Dan Jhovir Bataller", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Janica Roxas", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Rjhay Clemente", "role": "Groomsmen", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },           
-            { "name": "Alexandra Baldemeca", "role": "Bridesmaids", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
+            { "name": "Cristian Villarica", "role": "Groomsmen", "img": "./images/img-sponsor/cristian.jpg" },
+            { "name": "Jennifer Bascruz", "role": "Bridesmaids", "img": "./images/img-sponsor/jenifer.jpg" },
+            { "name": "Regienald Dizon", "role": "Groomsmen", "img": "./images/img-sponsor/regie.jpg" },
+            { "name": "Fretzie Basanez", "role": "Bridesmaids", "img": "./images/img-sponsor/pitch.jpg" },   
+            { "name": "Alvin Bides", "role": "Groomsmen", "img": "./images/img-sponsor/alvin.jpg" },
+            { "name": "Irene Bendijo", "role": "Bridesmaids", "img": "./images/img-sponsor/Irene.jpg" },
+            { "name": "Neil Patrick Morales", "role": "Groomsmen", "img": "./images/img-sponsor/neil.jpg" },
+            { "name": "Jasmin Gajero", "role": "Bridesmaids", "img": "./images/img-sponsor/jha.jpg" },           
+            { "name": "Daryl Tiampong", "role": "Groomsmen", "img": "./images/img-sponsor/da.jpg" },           
+            { "name": "Vina Laviste Condes", "role": "Bridesmaids", "img": "./images/img-sponsor/vina.jpg" },           
+            { "name": "Austin Nicomedez", "role": "Groomsmen", "img": "./images/img-sponsor/toti.jpg" },           
+            { "name": "Marife Mendavia", "role": "Bridesmaids", "img": "./images/img-sponsor/mea.jpg" },           
+            { "name": "Dan Jhovir Bataller", "role": "Groomsmen", "img": "./images/img-sponsor/dan.jpg" },           
+            { "name": "Janica Roxas", "role": "Bridesmaids", "img": "./images/img-sponsor/jan.jpg" },           
+            { "name": "Rjhay Clemente", "role": "Groomsmen", "img": "./images/img-sponsor/rj.jpg" },           
+            { "name": "Alexandra Baldemeca", "role": "Bridesmaids", "img": "./images/img-sponsor/alex.jpg" },           
         ];
 
         // Inject sponsors into HTML
@@ -650,17 +650,17 @@
 
           // JSON Data (normally from a separate file) CANDLE CORD VEIL
           const CandelCordVeil = [
-            { "name": "Regienald Dizon", "role": "Candle", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Fretzie Basanez", "role": "Candle", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Alvin Bides", "role": "Cord", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Irene Bendijo", "role": "Cord", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },   
-            { "name": "Cristian Villarica", "role": "Veil", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jennifer Bascruz", "role": "Veil", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Cloude Torres", "role": "Bible", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },           
-            { "name": "Jaycee Bides", "role": "Coin", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Jharmaine Bides", "role": "Coin", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Antoine Isaac Bides", "role": "Ring", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Mika Jane Bides", "role": "Ring", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "Regienald Dizon", "role": "Candle", "img": "./images/img-sponsor/regie.jpg" },
+            { "name": "Fretzie Basanez", "role": "Candle", "img": "./images/img-sponsor/pitch.jpg" },
+            { "name": "Alvin Bides", "role": "Cord", "img": "./images/img-sponsor/alvin.jpg" },
+            { "name": "Irene Bendijo", "role": "Cord", "img": "./images/img-sponsor/Irene.jpg" },   
+            { "name": "Cristian Villarica", "role": "Veil", "img": "./images/img-sponsor/cristian.jpg" },
+            { "name": "Jennifer Bascruz", "role": "Veil", "img": "./images/img-sponsor/jenifer.jpg" },
+            { "name": "Cloude Torres", "role": "Bible", "img": "./images/img-sponsor/cloud.jpg" },           
+            { "name": "Jaycee Bides", "role": "Coin", "img": "./images/img-sponsor/jc.jpg" },
+            { "name": "Jharmaine Bides", "role": "Coin", "img": "./images/img-sponsor/jhaja.jpg" },
+            { "name": "Antoine Isaac Bides", "role": "Ring", "img": "./images/img-sponsor/sakie.jpg" },
+            { "name": "Mika Jane Bides", "role": "Ring", "img": "./images/img-sponsor/mj.jpg" },
               
         ];
 
@@ -688,11 +688,11 @@
 
          // JSON Data (normally from a separate file)  Little Groom and Bride
          const LittleG = [
-            { "name": "JomMatthew Samaniego", "role": "Little Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Athara Samaniego", "role": "Little Bride", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Aejhune Bides", "role": "Little Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Jhyraine Bides", "role": "Little Bride", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Matthew Bides", "role": "Banner Welcome", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
+            { "name": "JomMatthew Samaniego", "role": "Little Groom", "img": "./images/img-sponsor/johnmatmat.jpg" },
+            { "name": "Athara Samaniego", "role": "Little Bride", "img": "./images/img-sponsor/atara.jpg" },
+            { "name": "Aejhune Bides", "role": "Little Groom", "img": "./images/img-sponsor/abu.jpg" },
+            { "name": "Jhyraine Bides", "role": "Little Bride", "img": "./images/img-sponsor/budang.jpg" },
+            { "name": "Matthew Bides", "role": "Banner Welcome", "img": "./images/img-sponsor/matmat.jpg" },
              
             
               
@@ -722,9 +722,9 @@
 
          // JSON Data (normally from a separate file)  Flower Boys
          const FlowerBoys = [
-            { "name": "Renato Bides Ⅲ", "role": "Flower Boys", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-            { "name": "Dennis John Bides", "role": "Flower Boys", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-            { "name": "Francis Earl Bides", "role": "Flower Boys", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+            { "name": "Renato Bides Ⅲ", "role": "Flower Boys", "img": "./images/img-sponsor/atong.jpg" },
+            { "name": "Dennis John Bides", "role": "Flower Boys", "img": "./images/img-sponsor/denden.jpg" },
+            { "name": "Francis Earl Bides", "role": "Flower Boys", "img": "./images/img-sponsor/fransis.jpg" },
          
             
               
@@ -754,13 +754,13 @@
 
        // JSON Data (normally from a separate file) Flower Boys
 const ParentsInformation = [
-    { "name": "Melchor D. Samaniego ✟", "role": "Father of the Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-    { "name": "Yolanda B. Samaniego", "role": "Mother of the Groom", "img": "./images/img-sponsor/Sponsor-img-3.jpg" },
-    { "name": "Renato B. Bides ✟", "role": "Father of the Bride", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-    { "name": "Virgina L. Bides", "role": "Mother of the Bride", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-    { "name": "Jomel B. Samaniego", "role": "Brother of the Groom", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-    { "name": "Allan L. Bides", "role": "Brother of the Bride", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
-    { "name": "Rev. Chistoper Sablay", "role": "Officiating Minister", "img": "./images/img-sponsor/Sponsor-img-2.jpg" },
+    { "name": "Melchor D. Samaniego ✟", "role": "Father of the Groom", "img": "./images/img-sponsor/melchor.jpg" },
+    { "name": "Yolanda B. Samaniego", "role": "Mother of the Groom", "img": "./images/img-sponsor/mama.jpg" },
+    { "name": "Renato B. Bides ✟", "role": "Father of the Bride", "img": "./images/img-sponsor/tatay.jpg" },
+    { "name": "Virgina L. Bides", "role": "Mother of the Bride", "img": "./images/img-sponsor/nanay.jpg" },
+    { "name": "Jomel B. Samaniego", "role": "Brother of the Groom", "img": "./images/img-sponsor/jomel.jpg" },
+    { "name": "Allan L. Bides", "role": "Brother of the Bride", "img": "./images/img-sponsor/allan.jpg" },
+    { "name": "Rev. Chistoper Sablay", "role": "Officiating Minister", "img": "./images/img-sponsor/rev.jpg" },
 ];
 
 const ParentsInformationssecondary = document.getElementById("ParentsInformationssecondary");
